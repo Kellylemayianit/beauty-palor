@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumière Beauty & Spa — Kimana</title>
+
+  <!-- Fonts: Playfair Display (serif) + DM Sans (sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+
+  <!-- Lucide Icons (lightweight) -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ============================================================
+       HEADER / NAV
+  ============================================================ -->
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a href="#top" class="logo" aria-label="Lumière home">
+        <span class="logo-mark">L</span>
+        <span class="logo-text">Lumière</span>
+      </a>
+
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="#services">Services</a>
+        <a href="#booking">Book</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <!-- Mobile hamburger -->
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <!-- Mobile drawer -->
+    <nav class="mobile-nav" aria-label="Mobile navigation" aria-hidden="true">
+      <a href="#services" class="mobile-nav__link">Services</a>
+      <a href="#booking" class="mobile-nav__link">Book</a>
+      <a href="#contact" class="mobile-nav__link">Contact</a>
+    </nav>
+  </header>
+
+
+  <!-- ============================================================
+       HERO
+  ============================================================ -->
+  <section class="hero" aria-labelledby="hero-heading">
+    <!-- Decorative petal shapes -->
+    <div class="hero__petal hero__petal--1" aria-hidden="true"></div>
+    <div class="hero__petal hero__petal--2" aria-hidden="true"></div>
+
+    <div class="hero__content">
+      <p class="hero__eyebrow">Kimana's Premier Nail & Beauty Studio</p>
+      <h1 class="hero__heading" id="hero-heading">
+        Crafted for the<br />
+        <em>Discerning Few.</em>
+      </h1>
+      <p class="hero__subheading">
+        Where every visit is a ritual. Exceptional nail artistry,<br class="break-lg" />
+        spa treatments, and beauty services in the heart of Kimana.
+      </p>
+      <div class="hero__cta-group">
+        <a href="#booking" class="btn btn--primary">Reserve Your Session</a>
+        <a href="#services" class="btn btn--ghost">Explore Services</a>
+      </div>
+    </div>
+
+    <!-- Editorial accent image column -->
+    <div class="hero__visual" aria-hidden="true">
+      <div class="hero__img-frame">
+        <div class="hero__img-fill"></div>
+        <div class="hero__img-tag">Est. 2019</div>
+      </div>
+    </div>
+
+    <!-- Scroll indicator -->
+    <a href="#services" class="hero__scroll" aria-label="Scroll to services">
+      <span class="hero__scroll-line"></span>
+      <span class="hero__scroll-text">Scroll</span>
+    </a>
+  </section>
+
+
+  <!-- ============================================================
+       INTRO STRIP
+  ============================================================ -->
+  <section class="intro-strip" aria-label="Studio philosophy">
+    <div class="intro-strip__inner">
+      <blockquote class="intro-strip__quote">
+        "Beauty is not a luxury — it is a language. We speak it fluently."
+      </blockquote>
+      <div class="intro-strip__stats">
+        <div class="stat">
+          <span class="stat__number">2 000+</span>
+          <span class="stat__label">Clients Served</span>
+        </div>
+        <div class="stat__divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat__number">6+</span>
+          <span class="stat__label">Years of Artistry</span>
+        </div>
+        <div class="stat__divider" aria-hidden="true"></div>
+        <div class="stat">
+          <span class="stat__number">100%</span>
+          <span class="stat__label">Premium Products</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       SERVICES — BENTO GRID
+  ============================================================ -->
+  <section class="services" id="services" aria-labelledby="services-heading">
+    <div class="services__header">
+      <p class="section-eyebrow">Our Offerings</p>
+      <h2 class="section-heading" id="services-heading">The Art of<br /><em>Nail Excellence</em></h2>
+      <p class="section-subheading">
+        Every service is performed with precision-grade tools,<br class="break-lg" />
+        premium products, and an obsession for detail.
+      </p>
+    </div>
+
+    <!-- Bento grid -->
+    <div class="bento-grid" role="list">
+
+      <!-- Tile 1 — Manicure (large) -->
+      <article class="bento-tile bento-tile--large" role="listitem" aria-label="Classic Manicure">
+        <div class="bento-tile__inner">
+          <div class="bento-tile__icon" aria-hidden="true">
+            <i data-lucide="hand"></i>
+          </div>
+          <div class="bento-tile__body">
+            <h3 class="bento-tile__title">Classic Manicure</h3>
+            <p class="bento-tile__desc">
+              A timeless ritual. Cuticle care, precise shaping, nourishing soak, and a flawless lacquer finish that lasts.
+            </p>
+            <div class="bento-tile__meta">
+              <span class="bento-tile__duration"><i data-lucide="clock" aria-hidden="true"></i> 45 min</span>
+              <span class="bento-tile__price">From KES 800</span>
+            </div>
+          </div>
+          <div class="bento-tile__accent" aria-hidden="true"></div>
+        </div>
+      </article>
+
+      <!-- Tile 2 — Pedicure -->
+      <article class="bento-tile bento-tile--tall" role="listitem" aria-label="Luxury Pedicure">
+        <div class="bento-tile__inner">
+          <div class="bento-tile__icon" aria-hidden="true">
+            <i data-lucide="footprints"></i>
+          </div>
+          <div class="bento-tile__body">
+            <h3 class="bento-tile__title">Luxury Pedicure</h3>
+            <p class="bento-tile__desc">
+              An indulgent foot treatment — exfoliation, callus removal, hot-towel wrap, and perfect polish.
+            </p>
+            <div class="bento-tile__meta">
+              <span class="bento-tile__duration"><i data-lucide="clock" aria-hidden="true"></i> 60 min</span>
+              <span class="bento-tile__price">From KES 1 200</span>
+            </div>
+          </div>
+          <div class="bento-tile__accent bento-tile__accent--alt" aria-hidden="true"></div>
+        </div>
+      </article>
+
+      <!-- Tile 3 — Gel Polish (accent) -->
+      <article class="bento-tile bento-tile--accent" role="listitem" aria-label="Gel Polish">
+        <div class="bento-tile__inner">
+          <div class="bento-tile__icon" aria-hidden="true">
+            <i data-lucide="sparkles"></i>
+          </div>
+          <div class="bento-tile__body">
+            <h3 class="bento-tile__title">Gel Polish</h3>
+            <p class="bento-tile__desc">
+              Chip-free brilliance for up to three weeks. Over 80 shades. Zero smudges.
+            </p>
+            <div class="bento-tile__meta">
+              <span class="bento-tile__duration"><i data-lucide="clock" aria-hidden="true"></i> 50 min</span>
+              <span class="bento-tile__price">From KES 1 000</span>
+            </div>
+          </div>
+        </div>
+      </article>
+
+      <!-- Tile 4 — Nail Art (wide) -->
+      <article class="bento-tile bento-tile--wide" role="listitem" aria-label="Nail Art">
+        <div class="bento-tile__inner">
+          <div class="bento-tile__icon" aria-hidden="true">
+            <i data-lucide="palette"></i>
+          </div>
+          <div class="bento-tile__body">
+            <h3 class="bento-tile__title">Bespoke Nail Art</h3>
+            <p class="bento-tile__desc">
+              Custom illustrations, 3-D embellishments, ombré fades, and editorial designs crafted uniquely for you. No two sets alike.
+            </p>
+            <div class="bento-tile__meta">
+              <span class="bento-tile__duration"><i data-lucide="clock" aria-hidden="true"></i> 90 min</span>
+              <span class="bento-tile__price">From KES 1 500</span>
+            </div>
+          </div>
+          <div class="bento-tile__badge" aria-label="Most popular service">Most Popular</div>
+        </div>
+      </article>
+
+    </div><!-- /.bento-grid -->
+  </section>
+
+
+  <!-- ============================================================
+       PROCESS STRIP
+  ============================================================ -->
+  <section class="process" aria-labelledby="process-heading">
+    <div class="process__inner">
+      <h2 class="section-heading process__heading" id="process-heading">
+        Your Visit,<br /><em>Perfected.</em>
+      </h2>
+      <ol class="process__steps">
+        <li class="process__step">
+          <span class="process__step-num">01</span>
+          <h3 class="process__step-title">Book Online</h3>
+          <p class="process__step-desc">Reserve your preferred service, date, and time in under 60 seconds.</p>
+        </li>
+        <li class="process__step">
+          <span class="process__step-num">02</span>
+          <h3 class="process__step-title">Arrive & Unwind</h3>
+          <p class="process__step-desc">Step into a serene, beautifully curated studio environment.</p>
+        </li>
+        <li class="process__step">
+          <span class="process__step-num">03</span>
+          <h3 class="process__step-title">Experience Mastery</h3>
+          <p class="process__step-desc">Our artisans bring skill, care, and creative vision to every detail.</p>
+        </li>
+        <li class="process__step">
+          <span class="process__step-num">04</span>
+          <h3 class="process__step-title">Leave Radiant</h3>
+          <p class="process__step-desc">Walk out with nails that turn heads and results that endure.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+
+  <!-- ============================================================
+       BOOKING FORM
+  ============================================================ -->
+  <section class="booking" id="booking" aria-labelledby="booking-heading">
+    <div class="booking__inner">
+      <div class="booking__text">
+        <p class="section-eyebrow">Reservations</p>
+        <h2 class="section-heading" id="booking-heading">
+          Secure Your<br /><em>Session.</em>
+        </h2>
+        <p class="booking__subtext">
+          Complete the form and your booking confirmation will be sent directly to WhatsApp. Walk-ins welcome, but reservations ensure priority service.
+        </p>
+        <ul class="booking__perks" aria-label="Booking benefits">
+          <li><i data-lucide="check-circle" aria-hidden="true"></i> Instant WhatsApp confirmation</li>
+          <li><i data-lucide="check-circle" aria-hidden="true"></i> No deposit required</li>
+          <li><i data-lucide="check-circle" aria-hidden="true"></i> Free rescheduling up to 2 hrs prior</li>
+        </ul>
+      </div>
+
+      <!-- Booking form -->
+      <div class="booking__form-wrap">
+        <form class="booking-form" id="bookingForm" novalidate aria-label="Booking form">
+
+          <!-- Name -->
+          <div class="form-group">
+            <label class="form-label" for="clientName">Full Name</label>
+            <input
+              class="form-input"
+              type="text"
+              id="clientName"
+              name="clientName"
+              placeholder="e.g. Amina Wanjiru"
+              required
+              autocomplete="name"
+            />
+            <span class="form-error" role="alert" aria-live="polite"></span>
+          </div>
+
+          <!-- Phone -->
+          <div class="form-group">
+            <label class="form-label" for="clientPhone">WhatsApp Number</label>
+            <input
+              class="form-input"
+              type="tel"
+              id="clientPhone"
+              name="clientPhone"
+              placeholder="+254 7XX XXX XXX"
+              required
+              autocomplete="tel"
+            />
+            <span class="form-error" role="alert" aria-live="polite"></span>
+          </div>
+
+          <!-- Service Dropdown -->
+          <div class="form-group">
+            <label class="form-label" for="serviceSelect">Service</label>
+            <div class="form-select-wrap">
+              <select class="form-input form-select" id="serviceSelect" name="service" required>
+                <option value="" disabled selected>Select a service…</option>
+                <option value="Classic Manicure">Classic Manicure</option>
+                <option value="Luxury Pedicure">Luxury Pedicure</option>
+                <option value="Gel Polish">Gel Polish</option>
+                <option value="Bespoke Nail Art">Bespoke Nail Art</option>
+                <option value="Mani + Pedi Combo">Mani + Pedi Combo</option>
+              </select>
+              <i data-lucide="chevron-down" class="form-select-icon" aria-hidden="true"></i>
+            </div>
+            <span class="form-error" role="alert" aria-live="polite"></span>
+          </div>
+
+          <!-- Date + Time row -->
+          <div class="form-row">
+            <div class="form-group">
+              <label class="form-label" for="bookingDate">Preferred Date</label>
+              <input
+                class="form-input"
+                type="date"
+                id="bookingDate"
+                name="bookingDate"
+                required
+              />
+              <span class="form-error" role="alert" aria-live="polite"></span>
+            </div>
+            <div class="form-group">
+              <label class="form-label" for="bookingTime">Preferred Time</label>
+              <select class="form-input form-select" id="bookingTime" name="bookingTime" required>
+                <option value="" disabled selected>Select time…</option>
+                <option value="09:00">9:00 AM</option>
+                <option value="10:00">10:00 AM</option>
+                <option value="11:00">11:00 AM</option>
+                <option value="12:00">12:00 PM</option>
+                <option value="13:00">1:00 PM</option>
+                <option value="14:00">2:00 PM</option>
+                <option value="15:00">3:00 PM</option>
+                <option value="16:00">4:00 PM</option>
+                <option value="17:00">5:00 PM</option>
+              </select>
+              <span class="form-error" role="alert" aria-live="polite"></span>
+            </div>
+          </div>
+
+          <!-- Notes -->
+          <div class="form-group">
+            <label class="form-label" for="bookingNotes">Special Requests <span class="form-optional">(optional)</span></label>
+            <textarea
+              class="form-input form-textarea"
+              id="bookingNotes"
+              name="notes"
+              rows="3"
+              placeholder="e.g. Nail inspo reference, allergies, or special occasion…"
+            ></textarea>
+          </div>
+
+          <button class="btn btn--primary btn--full" type="submit" id="submitBtn">
+            <span class="btn-text">Confirm Booking via WhatsApp</span>
+            <span class="btn-loader" aria-hidden="true"></span>
+            <i data-lucide="arrow-right" aria-hidden="true"></i>
+          </button>
+
+          <!-- Success/error banners -->
+          <div class="form-banner form-banner--success" id="formSuccess" role="status" aria-live="polite" hidden>
+            <i data-lucide="check-circle" aria-hidden="true"></i>
+            Booking sent! Check WhatsApp for your confirmation.
+          </div>
+          <div class="form-banner form-banner--error" id="formError" role="alert" aria-live="assertive" hidden>
+            <i data-lucide="alert-circle" aria-hidden="true"></i>
+            Something went wrong. Please try again or call us directly.
+          </div>
+
+        </form>
+      </div><!-- /.booking__form-wrap -->
+    </div><!-- /.booking__inner -->
+  </section>
+
+
+  <!-- ============================================================
+       FOOTER / CONTACT
+  ============================================================ -->
+  <footer class="site-footer" id="contact" aria-label="Footer">
+    <div class="footer__inner">
+
+      <!-- Brand column -->
+      <div class="footer__brand">
+        <a href="#top" class="logo logo--light" aria-label="Back to top">
+          <span class="logo-mark">L</span>
+          <span class="logo-text">Lumière</span>
+        </a>
+        <p class="footer__tagline">
+          Nail artistry &amp; beauty rituals<br />crafted for the discerning few.
+        </p>
+        <div class="footer__social" aria-label="Social media links">
+          <a href="https://wa.me/254700000000" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp us" class="social-link">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="social-link">
+            <i data-lucide="instagram" aria-hidden="true"></i>
+          </a>
+          <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook" class="social-link">
+            <i data-lucide="facebook" aria-hidden="true"></i>
+          </a>
+        </div>
+      </div>
+
+      <!-- Contact column -->
+      <div class="footer__col">
+        <h3 class="footer__col-title">Contact Us</h3>
+        <ul class="footer__list" aria-label="Contact information">
+          <li>
+            <i data-lucide="map-pin" aria-hidden="true"></i>
+            <span>Kimana Town Centre,<br />Loitoktok Sub-County, Kajiado</span>
+          </li>
+          <li>
+            <i data-lucide="phone" aria-hidden="true"></i>
+            <a href="tel:+254700000000">+254 700 000 000</a>
+          </li>
+          <li>
+            <i data-lucide="mail" aria-hidden="true"></i>
+            <a href="mailto:hello@lumiere-kimana.co.ke">hello@lumiere-kimana.co.ke</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Hours column -->
+      <div class="footer__col">
+        <h3 class="footer__col-title">Studio Hours</h3>
+        <ul class="footer__hours" aria-label="Business hours">
+          <li><span>Monday – Friday</span><span>8:00 AM – 7:00 PM</span></li>
+          <li><span>Saturday</span><span>8:00 AM – 6:00 PM</span></li>
+          <li><span>Sunday</span><span>10:00 AM – 4:00 PM</span></li>
+        </ul>
+        <p class="footer__note">Public holidays may vary.</p>
+      </div>
+
+      <!-- Quick links -->
+      <div class="footer__col">
+        <h3 class="footer__col-title">Navigate</h3>
+        <ul class="footer__list footer__nav">
+          <li><a href="#services">Services</a></li>
+          <li><a href="#booking">Book a Session</a></li>
+          <li><a href="#contact">Location</a></li>
+        </ul>
+      </div>
+
+    </div><!-- /.footer__inner -->
+
+    <div class="footer__bottom">
+      <p>&copy; <span id="currentYear"></span> Lumière Beauty &amp; Spa, Kimana. All rights reserved.</p>
+      <p class="footer__credit">Crafted with precision.</p>
+    </div>
+  </footer>
+
+
+  <!-- ============================================================
+       FLOATING WHATSAPP BUTTON
+  ============================================================ -->
+  <a
+    href="https://wa.me/254700000000?text=Hello%20Lumi%C3%A8re%2C%20I%27d%20like%20to%20enquire%20about%20your%20services."
+    class="whatsapp-fab"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat with us on WhatsApp"
+    title="Chat on WhatsApp"
+  >
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" width="28" height="28">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    <span class="whatsapp-fab__label">Chat with us</span>
+  </a>
+
+
+  <script src="app.js"></script>
+</body>
+</html>
