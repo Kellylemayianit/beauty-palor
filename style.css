@@ -6,27 +6,27 @@
 
 /* ─── CSS CUSTOM PROPERTIES ──────────────────────────────── */
 :root {
-  /* Brand colors */
-  --clr-blush: #fdf2f2; /* page background */
-  --clr-pink: #f9a8d4; /* accents, highlights */
-  --clr-pink-deep: #f472b6; /* hover states */
-  --clr-pink-muted: #fbcfe8; /* borders, subtle fills */
+  /* Brand colors - Dense & Saturated for (+3) visibility */
+  --clr-blush: #fce7e7; /* Thickened background rose (Original was #fdf2f2) */
+  --clr-pink: #f472b6; /* Bold accent pink (Original was #f9a8d4) */
+  --clr-pink-deep: #db2777; /* Deepest rose for hover (High visibility) */
+  --clr-pink-muted: #f9a8d4; /* Thicker borders/fills */
   --clr-white: #ffffff;
-  --clr-charcoal: #333333; /* headings */
-  --clr-body: #5a5a5a; /* body copy */
-  --clr-light-text: #8c8c8c; /* meta, eyebrows */
-  --clr-border: #efd6e4; /* card borders */
+  --clr-charcoal: #1a1a1a; /* Darker, heavier headings (Was #333333) */
+  --clr-body: #374151; /* Heavier body copy for reading (Was #5a5a5a) */
+  --clr-light-text: #4b5563; /* Darker meta text (Was #8c8c8c) */
+  --clr-border: #e5a5c5; /* Darkened border contrast */
 
-  /* Tile accent fills */
-  --clr-tile-1: #fdf2f2;
-  --clr-tile-2: #fff0f7;
-  --clr-tile-accent: #f9a8d4;
+  /* Tile accent fills - Increased density */
+  --clr-tile-1: #fce7e7;
+  --clr-tile-2: #fbcfe8;
+  --clr-tile-accent: #f472b6;
 
-  /* Typography */
+  /* Typography - Identical to original */
   --ff-serif: "Playfair Display", Georgia, serif;
   --ff-sans: "DM Sans", system-ui, sans-serif;
 
-  /* Spacing scale */
+  /* Spacing scale - Identical to original */
   --sp-xs: 0.5rem;
   --sp-sm: 1rem;
   --sp-md: 1.5rem;
@@ -35,25 +35,25 @@
   --sp-2xl: 6rem;
   --sp-3xl: 8rem;
 
-  /* Radius */
+  /* Radius - Identical to original */
   --r-sm: 6px;
   --r-md: 14px;
   --r-lg: 24px;
   --r-xl: 40px;
   --r-pill: 9999px;
 
-  /* Shadows */
-  --shadow-card: 0 2px 20px rgba(249, 168, 212, 0.12), 0 1px 4px rgba(51, 51, 51, 0.06);
-  --shadow-hover: 0 8px 40px rgba(249, 168, 212, 0.22), 0 2px 8px rgba(51, 51, 51, 0.08);
-  --shadow-btn: 0 4px 20px rgba(249, 168, 212, 0.35);
+  /* Shadows - Sharpened for the heavier colors */
+  --shadow-card: 0 4px 20px rgba(244, 114, 182, 0.2), 0 1px 4px rgba(26, 26, 26, 0.1);
+  --shadow-hover: 0 12px 40px rgba(244, 114, 182, 0.3), 0 2px 8px rgba(26, 26, 26, 0.12);
+  --shadow-btn: 0 4px 20px rgba(244, 114, 182, 0.45);
 
-  /* Transitions */
+  /* Transitions - Identical to original */
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
   --t-fast: 0.18s;
   --t-med: 0.35s;
   --t-slow: 0.55s;
 
-  /* Layout */
+  /* Layout - Identical to original */
   --max-w: 1240px;
   --gutter: clamp(1.25rem, 4vw, 2.5rem);
   --header-h: 72px;
@@ -572,7 +572,7 @@ textarea {
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-around; /* Changed to spread stats evenly */
   flex-wrap: wrap;
   gap: var(--sp-lg);
 }
@@ -594,12 +594,13 @@ textarea {
   align-items: center;
   gap: 2rem;
   flex-wrap: wrap;
+  justify-content: center; /* Ensures centering on desktop */
 }
 
 .stat {
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: center; /* Changed from flex-end to center for better balance */
   gap: 0.2rem;
 }
 
@@ -616,13 +617,13 @@ textarea {
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--clr-pink);
-  opacity: 0.75;
+  opacity: 1; /* Increased from 0.75 to 1 for density/visibility */
 }
 
 .stat__divider {
   width: 1px;
   height: 40px;
-  background: rgba(249, 168, 212, 0.25);
+  background: rgba(249, 168, 212, 0.45); /* Increased opacity from 0.25 to 0.45 */
 }
 
 /* ─── SERVICES / BENTO GRID ──────────────────────────────── */
@@ -636,13 +637,8 @@ textarea {
   margin-bottom: var(--sp-xl);
 }
 
-/* Bento grid */
-.bento-grid {
-  display: grid;
-  grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: auto auto;
-  gap: 1.25rem;
-}
+/* Bento grid — base structure is now handled by .slider-window + @keyframes.
+   Only non-layout base styles are kept here. */
 
 /* Default tile base */
 .bento-tile {
@@ -667,24 +663,9 @@ textarea {
   outline-offset: 2px;
 }
 
-/* Grid placement */
-.bento-tile--large {
-  grid-column: span 6;
-  grid-row: span 2;
-}
-.bento-tile--tall {
-  grid-column: span 3;
-  grid-row: span 2;
-}
+/* Tile variant backgrounds (grid-column spans removed — tiles are now flex items) */
 .bento-tile--accent {
-  grid-column: span 3;
   background: var(--clr-tile-accent);
-}
-.bento-tile--wide {
-  grid-column: span 6;
-}
-.bento-tile:not([class*="--"]) {
-  grid-column: span 3;
 }
 .bento-tile__inner {
   padding: var(--sp-lg);
@@ -693,7 +674,6 @@ textarea {
   flex-direction: column;
   position: relative;
   gap: auto;
-
 }
 .bento-tile__icon {
   display: flex;
@@ -1271,6 +1251,77 @@ textarea {
   }
 }
 
+/* ─── SERVICES SLIDER (CSS-only auto-scroll) ─────────────── */
+
+/* 1. The viewport window — clips overflow and hides scrollbar */
+.slider-window {
+  width: 100%;
+  overflow-x: auto; /* Restored swipe capability */
+  padding: 2rem 0;
+  scrollbar-width: none;
+  -webkit-overflow-scrolling: touch;
+  /* Fade edges effect - KEPT ORIGINAL */
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+}
+
+.slider-window::-webkit-scrollbar {
+  display: none;
+}
+
+/* 2. The flex track — holds all 14 tiles (7 real + 7 clones) in one line */
+.bento-grid {
+  display: flex !important; 
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1.5rem;
+  width: max-content;
+  
+  /* Original Variables */
+  --tile-w: 350px;
+  --tile-count: 7;
+  --gap: 1.5rem;
+  
+  animation: scroll-tiles 38s linear infinite;
+}
+
+/* Pause on hover/active so users can take manual control */
+.slider-window:hover .bento-grid,
+.slider-window:active .bento-grid {
+  animation-play-state: paused;
+}
+
+/* 3. The keyframes: translate left by (tile-width + gap) × tile-count */
+@keyframes scroll-tiles {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    /* Moves exactly 7 tiles, then snaps back to tile 1 for infinite effect */
+    transform: translateX(calc(-1 * (var(--tile-w) + var(--gap)) * var(--tile-count)));
+  }
+}
+
+/* 4. Fixed-width tiles — never shrink */
+.bento-tile {
+  width: var(--tile-w);
+  flex-shrink: 0;
+  white-space: normal; 
+}
+
+/* 5. Mobile override */
+@media (max-width: 768px) {
+  .bento-grid {
+    --tile-w: 85vw;
+    animation-duration: 30s;
+  }
+
+  .intro-strip__stats {
+    flex-direction: row; 
+    justify-content: center;
+    gap: 1.5rem; /* Added slight gap for mobile density */
+  }
+}
 /* ─── RESPONSIVE ──────────────────────────────────────────── */
 
 /* Large tablets and below (≤ 1024px) */
@@ -1286,19 +1337,6 @@ textarea {
 
   .process__heading {
     position: static;
-  }
-
-  .bento-tile--large {
-    grid-column: span 7;
-  }
-  .bento-tile--tall {
-    grid-column: span 5;
-  }
-  .bento-tile--accent {
-    grid-column: span 5;
-  }
-  .bento-tile--wide {
-    grid-column: span 7;
   }
 
   .footer__inner {
@@ -1354,39 +1392,11 @@ textarea {
     align-items: center;
   }
 
-  /* Bento: single column */
-  /* Bento: single column - FIXED */
-  .bento-grid {
-    display: flex; /* Switching to Flex is safer for single-column mobile */
-    flex-direction: column;
-    gap: var(--sp-md);
-  }
-
-  /* Reset all specialized spans to fill 100% of the phone width */
-  .bento-tile--large,
-  .bento-tile--tall,
-  .bento-tile--accent,
-  .bento-tile--wide,
-  .bento-tile {
-    grid-column: span 1 !important;
-    grid-row: span 1 !important;
-    width: 100%;
-    min-height: min-content;
-  }
-
-  /* Ensure the image doesn't vanish and looks editorial on mobile */
+  /* Ensure the image has good height on mobile */
   .bento-tile__img {
     height: 240px;
     width: 100%;
     object-fit: cover;
-  }
-
-  .bento-tile--large,
-  .bento-tile--tall,
-  .bento-tile--accent,
-  .bento-tile--wide {
-    grid-column: span 1;
-    grid-row: span 1;
   }
 
   .booking__inner {
