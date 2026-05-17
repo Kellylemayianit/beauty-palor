@@ -1,6 +1,6 @@
 /**
  * ============================================================
- * LUMIÈRE BEAUTY & SPA — app.js
+ * Denis Ng'ang'a BEAUTY & SPA — app.js
  * Handles: form validation, API submission, WhatsApp redirect,
  *          header scroll effect, mobile nav, icon init,
  *          and progressive date constraints.
